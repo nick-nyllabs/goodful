@@ -1,5 +1,6 @@
-
 import React from 'react';
+
+import env from '../../env'; const BACKEND_URL = env.BACKEND_URL;
 
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
@@ -7,6 +8,8 @@ import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import { cyan500 } from 'material-ui/styles/colors';
+
+var $ = window.$;
 
 class Register extends React.Component {
 
@@ -27,6 +30,10 @@ class Register extends React.Component {
 
   changeFirstName = e => this.setState({firstName: e.target.value});
 
+  registerUser = () => {
+    $.post(BACKEND_URL + '/newUser', this.state);
+  };
+
 
   render () { return <div>
     <AppBar title="Goodful"
@@ -44,7 +51,7 @@ class Register extends React.Component {
         <TextField floatingLabelFixed={true} floatingLabelText="email" hintText={"name@email.com"} floatingLabelStyle={{cyan500}} value={this.state.email} onChange={e => this.changeField(e, "email")}/>
         <TextField type="date" floatingLabelFixed={true} floatingLabelText="email" floatingLabelStyle={{cyan500}} value={this.state.dob} onChange={e => this.changeField(e, "dob")}/>
         <div style={{margin: "24px"}}/>
-        <RaisedButton primary={true} disabled={!(this.state.firstName && this.state.lastName && this.state.email && this.state.dob)} label="Join Goodful Network"/>
+        <RaisedButton primary={true} disabled={!(this.state.firstName && this.state.lastName && this.state.email)}  label="Join Goodful Network" onClick={this.registerUser}/>
       </Paper>
       <Paper></Paper>
     </div>
