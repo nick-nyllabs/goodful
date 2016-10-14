@@ -1,0 +1,23 @@
+$cardWidth: 800px;
+
+#sc-home {
+  .actionItems {
+    margin-top: 10px;
+  }
+  .actionItemsHeader {
+    width: $cardWidth;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .actionItemsContainer {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .mui-card {
+    width: $cardWidth;
+    margin: 8px auto;
+  }
+}

@@ -1,5 +1,41 @@
+html, body, div#root, div.App {
+  height: 100%; }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
+
+#sc-register {
+  background: url("assets/family.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%; }
+
+.g-standardCard {
+  height: 240px;
+  width: 640px;
+  overflow: hidden; }
+
+.g-white-icon {
+  color: white; }
+
+#sc-home .actionItems {
+  margin-top: 10px; }
+#sc-home .actionItemsHeader {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left; }
+#sc-home .actionItemsContainer {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
+#sc-home .mui-card {
+  width: 800px;
+  margin: 8px auto; }
+
+/*# sourceMappingURL=index.css.map */

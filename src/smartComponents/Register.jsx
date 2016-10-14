@@ -35,15 +35,16 @@ class Register extends React.Component {
   };
 
 
-  render () { return <div>
+  render () { return <div id="sc-register">
     <AppBar title="Goodful"
-            iconElementRight={<FlatButton label="Login" />}
+            iconElementRight={<FlatButton label="Login"/>}
     />
     <div style={{margin: "64px"}}></div>
     <div style={{ margin: "24px 48px", position: "inline-block", textAlign: "left"}}>
-      <h2>Some catchy thing can go right here.</h2>
-      <Paper style={{maxWidth: "480px", padding: "24px"}}>
+      <Paper style={{maxWidth: "480px", padding: "24px", opacity: "0.94"}}>
         <div>
+          <h2>Some catchy thing can go right here.</h2>
+
           Sign up here!
         </div>
         <TextField floatingLabelFixed={true} floatingLabelText="First Name" hintText={"Enter your first name"} floatingLabelStyle={{cyan500}} value={this.state.firstName} onChange={(e) => this.changeField(e, "firstName")}/>
